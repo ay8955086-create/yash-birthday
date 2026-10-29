@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff7f8">
+<title>Yash — A Little Universe of Love | 11th Birthday</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--rose:#df7796;--rose-dark:#a85276;--blush:#fff0f4;--lav:#eae2fb;--mint:#e2f5eb;--butter:#fff2c8;--ink:#493b4f;--muted:#877789;--line:#f0dfe7;--white:#fffdfd;--shadow:0 24px 70px #a8788f16}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fffaf9;color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;overflow-x:hidden}button{font:inherit;cursor:pointer}a{color:inherit}
+#confetti{position:fixed;inset:0;z-index:30;pointer-events:none;overflow:hidden}.confetti{position:absolute;top:-24px;width:9px;height:14px;border-radius:1px;animation:fall var(--time) linear forwards;opacity:.95;box-shadow:none}@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(760deg);opacity:.8}}
+#toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:40;background:white;color:#80506c;border:1px solid #f3d8e3;padding:12px 18px;border-radius:99px;box-shadow:0 12px 40px #7f53621c;font-weight:800;max-width:90%;text-align:center}
+.bg-bloom{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(circle at 6% 14%,#ffe6ee 0,transparent 24%),radial-gradient(circle at 94% 44%,#ece5ff 0,transparent 25%),radial-gradient(circle at 45% 98%,#e6f8ed 0,transparent 27%);opacity:.7}
+header,section,footer{position:relative;z-index:1}.nav{position:absolute;z-index:5;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:19px clamp(18px,5vw,76px)}.brand{font:700 1.25rem Fredoka;color:#77577f;letter-spacing:.02em}.brand span{color:var(--rose)}.nav-pill{padding:9px 14px;border:1px solid #efd7e1;border-radius:99px;background:#ffffffb8;color:#a85b7b;font-size:.75rem;font-weight:800;letter-spacing:.08em}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:100px 20px 72px;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#fff 0%,#fff6f8 48%,#f8f3ff 100%)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.hero:before{width:350px;height:350px;left:-180px;bottom:-160px;background:#ffe1eb;filter:blur(4px)}.hero:after{width:400px;height:400px;right:-190px;top:-170px;background:#e9e0ff;filter:blur(4px)}
+.hero-inner{max-width:930px;position:relative;z-index:2}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:9px 16px;border:1px solid #f0d9e3;border-radius:99px;background:#ffffffc9;color:#b65f82;text-transform:uppercase;letter-spacing:.13em;font-size:.73rem;font-weight:900;box-shadow:0 8px 25px #b46d8710}
+h1{font:700 clamp(3.4rem,10.5vw,8.3rem)/.9 Fredoka,sans-serif;letter-spacing:-.055em;color:#d96e93;margin:26px 0 18px;text-shadow:0 4px 0 white,0 12px 26px #d98bab24}h1 span{display:block;color:#937bc3}
+.hero-desc{max-width:690px;margin:0 auto;color:#7c6a81;font-size:clamp(1rem,2.4vw,1.2rem);line-height:1.8}
+.age-row{display:flex;justify-content:center;align-items:center;gap:15px;margin:27px auto}.age{width:92px;height:92px;display:grid;place-items:center;border-radius:28px;transform:rotate(-7deg);background:linear-gradient(145deg,#fff0b6,#ffc8d8);border:3px solid white;box-shadow:0 0 0 7px #f8c9d82c,0 13px 32px #bf819d20;color:#a55d7b}.age strong{font:700 3.4rem Fredoka}.age-copy{text-align:left}.age-copy small{display:block;color:#ad8aa4;font-weight:900;letter-spacing:.15em;text-transform:uppercase;font-size:.7rem}.age-copy b{display:block;font:700 1.45rem Fredoka;color:#9275b8}.age-copy span{font-size:.88rem;color:#8b7a90}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{border:0;border-radius:15px;padding:14px 20px;font-weight:900;transition:transform .2s,box-shadow .2s;box-shadow:0 7px 0 #a56e8319}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px #a56e831c}.primary{background:linear-gradient(100deg,#e982a5,#f4a7b9);color:white}.secondary{background:white;border:1px solid #e7d9f4;color:#866eaf;box-shadow:0 5px 18px #aa91bc12}
+.float{position:absolute;font-size:clamp(2rem,4vw,3.4rem);animation:bob 4s ease-in-out infinite;filter:drop-shadow(0 7px 8px #c58da622)}.f1{top:21%;left:8%}.f2{top:22%;right:8%;animation-delay:.8s}.f3{bottom:13%;left:12%;animation-delay:1.5s}.f4{bottom:12%;right:12%;animation-delay:.3s}@keyframes bob{50%{transform:translateY(-15px) rotate(8deg)}}
+.scroll{position:absolute;bottom:19px;left:0;right:0;font-size:.76rem;color:#a28ca8;letter-spacing:.12em}
+section{padding:82px 20px}.wrap{max-width:1160px;margin:auto}.kicker{text-align:center;text-transform:uppercase;letter-spacing:.18em;font-size:.74rem;color:#bb6b8b;font-weight:900}.title{text-align:center;font:700 clamp(2.15rem,5vw,3.7rem)/1.08 Fredoka;letter-spacing:-.035em;color:#725780;margin:11px 0 13px}.lead{text-align:center;max-width:700px;margin:0 auto 38px;color:var(--muted);line-height:1.8}
+.letter-section{background:linear-gradient(180deg,#fff8fa,#fff4f7)}.letter{max-width:900px;margin:auto;padding:clamp(25px,5vw,48px);border:1px solid #f1dce5;border-radius:30px;background:#ffffffdc;box-shadow:var(--shadow);position:relative}.letter:after{content:"💌";position:absolute;right:26px;top:-24px;font-size:42px}.letter h3{font:600 clamp(1.4rem,3vw,2rem) 'Playfair Display',serif;color:#b45f81;margin:0 0 14px}.letter p{color:#6f5d75;font-size:1.03rem;line-height:1.95}.letter .sign{color:#bd6288;font-weight:800}
+.gallery-section{background:#fffdf8}.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.memory{margin:0;padding:9px 9px 16px;background:#fff;border:1px solid #f1e4e9;border-radius:21px;box-shadow:0 10px 28px #9f789011;transform:rotate(var(--tilt));transition:transform .25s,box-shadow .25s,border-color .25s;overflow:hidden;cursor:pointer}.memory:hover,.memory:focus{transform:translateY(-7px) rotate(0) scale(1.02);box-shadow:0 20px 40px #a57b9124;border-color:#edb8cb;outline:none}.memory img{display:block;width:100%;height:285px;object-fit:cover;border-radius:14px;background:#fbe8ef}.memory figcaption{font:600 1.12rem Fredoka;text-align:center;padding:13px 4px 4px;color:#8e6ca7}.memory .caption-detail{font-size:.87rem;line-height:1.55;color:#9a879d;text-align:center;padding:0 6px 6px}.memory .secret{display:none;background:#fff3f7;color:#b15d80;border-radius:12px;padding:11px 10px;margin:7px 0 0;font-size:.86rem;line-height:1.55;text-align:center;font-weight:700}.memory.open .secret{display:block}.memory.open{border-color:#eab5ca}
+.timeline{background:linear-gradient(145deg,#f5f0ff,#fff7f9 58%,#effaf4)}.timeline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.moment{padding:23px;border-radius:22px;background:#ffffffb8;border:1px solid #fff;box-shadow:0 10px 30px #9b7da312}.moment .icon{font-size:2rem}.moment h3{font:600 1.3rem Fredoka;color:#9476b8;margin:10px 0 7px}.moment p{color:#8b7b91;line-height:1.65;font-size:.93rem;margin:0}
+.cake-section{background:linear-gradient(145deg,#fff0f5,#f1eaff 54%,#edfbf5)}.cake-card{max-width:870px;margin:auto;padding:clamp(24px,5vw,45px);text-align:center;border:1px solid #fff;border-radius:30px;background:#ffffffb5;box-shadow:0 20px 55px #b28aa716}.cake-emoji{font-size:clamp(6rem,16vw,9rem);line-height:1.2;animation:bob 3s ease-in-out infinite;filter:drop-shadow(0 10px 10px #c68ca51a)}.candles{display:flex;justify-content:center;gap:7px;margin:15px auto 20px}.candle{width:12px;height:42px;border-radius:5px;position:relative;background:repeating-linear-gradient(135deg,#f28eae 0 6px,#fff 6px 12px);transition:.2s}.candle:before{content:"";position:absolute;top:-12px;left:2px;width:8px;height:12px;border-radius:80% 20% 60% 40%;background:#ffc85c;box-shadow:0 0 12px #ffcf6b;animation:flame .65s ease-in-out infinite alternate}@keyframes flame{to{transform:scale(.8) rotate(8deg);opacity:.7}}.candle.out:before{display:none}.cake-card p{color:#88768e;line-height:1.7}.cake-wish{display:none;max-width:610px;margin:22px auto 0;padding:21px;background:#fff4cb;border:1px solid #f1dfa3;border-radius:20px;color:#8a6634;line-height:1.8;font-weight:800}.cake-wish.show{display:block;animation:pop .4s ease}@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+.oracle{background:#fbf6ff}.oracle-card{max-width:780px;margin:auto;padding:30px 22px;border-radius:28px;background:#fff;border:1px solid #eadff6;box-shadow:0 14px 40px #9c80b613;text-align:center}.oracle-icon{font-size:4.5rem;animation:bob 3s infinite}.wishline{min-height:84px;display:grid;place-items:center;font:600 clamp(1.25rem,3vw,1.8rem)/1.45 'Playfair Display',serif;color:#8a6bb1;margin:15px auto}.oracle-card p{color:#9b879f;line-height:1.6}.wishcards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.wishcard{padding:20px;border-radius:20px;background:#ffffffcf;border:1px solid #f0e3f0;text-align:center;box-shadow:0 8px 24px #a58ba511}.wishcard span{font-size:2rem}.wishcard h3{font:600 1.2rem Fredoka;color:#9a73b3;margin:8px 0}.wishcard p{font-size:.88rem;color:#8d7b93;line-height:1.6;margin:0}
+footer{text-align:center;background:#fff0f5;padding:44px 18px 50px;border-top:1px solid #f2dce5}.footer-title{font:700 clamp(2.2rem,6vw,4rem) Fredoka;color:#df789c;margin:12px 0}footer p{color:#8e7895}
+@media(max-width:900px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.memory img{height:330px}.timeline-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.nav{padding:15px}.nav-pill{font-size:.62rem}.gallery{gap:10px}.memory{padding:7px 7px 12px}.memory img{height:230px}.memory figcaption{font-size:1rem}.memory .caption-detail{font-size:.78rem}.timeline-grid,.wishcards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.moment,.wishcard{padding:15px 11px}.moment h3,.wishcard h3{font-size:1.08rem}.moment p,.wishcard p{font-size:.82rem}.f1,.f2{top:14%;opacity:.7}.f3,.f4{bottom:8%;opacity:.7}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* EXTRA PARTY ENERGY — still pastel, but louder, bolder and more playful */
+.party-strip{padding:45px 20px;background:linear-gradient(100deg,#ffe4ec,#fff1c9 32%,#e9e0ff 67%,#dcf8ec);border-top:1px solid #fff;border-bottom:1px solid #fff;overflow:hidden}
+.party-strip-inner{text-align:center;position:relative}
+.party-stamp{display:inline-block;padding:8px 15px;border-radius:99px;background:#fff;border:2px dashed #ef9cba;color:#bb5b82;font-size:.75rem;font-weight:1000;letter-spacing:.13em;transform:rotate(-2deg);box-shadow:0 7px 0 #d58ca51c}
+.party-strip-title{font:700 clamp(2rem,5vw,4rem)/1.05 Fredoka;color:#78558b;letter-spacing:-.03em;margin:17px 0 8px}
+.party-strip-title em{font-style:normal;color:#df6f97;text-shadow:2px 2px #fff}
+.party-strip-sub{font-weight:700;color:#91718e;letter-spacing:.02em}
+.party-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px}
+.hero{background:radial-gradient(circle at 12% 22%,#fff 0,transparent 28%),radial-gradient(circle at 90% 26%,#f7dfff 0,transparent 28%),radial-gradient(circle at 55% 100%,#dff9ec 0,transparent 30%),linear-gradient(135deg,#fff0f5,#fff9e7 50%,#f2edff)}
+.hero:before{background:#ffd7e5;box-shadow:0 0 80px #ffb8d4}
+.hero:after{background:#e3d7ff;box-shadow:0 0 90px #d6c3ff}
+h1{animation:titlePop .85s cubic-bezier(.2,.8,.2,1) both}
+@keyframes titlePop{0%{opacity:0;transform:translateY(24px) scale(.92)}70%{transform:translateY(-5px) scale(1.015)}100%{opacity:1;transform:translateY(0) scale(1)}}
+.float{animation:bobParty 2.7s ease-in-out infinite;filter:drop-shadow(0 9px 8px #c58da633)}
+@keyframes bobParty{0%,100%{transform:translateY(0) rotate(-6deg) scale(1)}50%{transform:translateY(-22px) rotate(8deg) scale(1.08)}}
+.primary{background:linear-gradient(105deg,#e96f9b,#ff9f89 55%,#ef83b2);box-shadow:0 7px 0 #a85e7b2b,0 12px 24px #d7799c21}
+.primary:hover{box-shadow:0 10px 0 #a85e7b24,0 16px 30px #d7799c35}
+.memory:hover{transform:translateY(-10px) rotate(0) scale(1.035)}
+.cake-card{background:linear-gradient(145deg,#ffffffd9,#fff5f9d9,#f6f1ffdb)}
+.confetti{filter:none}
+@media(max-width:540px){.party-strip{padding:35px 16px}.party-strip-title{font-size:2rem}.party-strip-sub{font-size:.9rem}}
+
+
+/* FOOTBALL STADIUM HERO */
+.hero{
+  background:
+    radial-gradient(ellipse at 50% 7%,#fff9d9 0%,#fff9d900 24%),
+    linear-gradient(180deg,#172c46 0%,#274c63 18%,#4d805e 36%,#277044 70%,#174f37 100%);
+  color:#fff;
+}
+.hero:before,.hero:after{content:"";position:absolute;pointer-events:none;z-index:0}
+.hero:before{
+  inset:25% -5% -15%;
+  width:auto;height:auto;border-radius:0;filter:none;
+  background:
+    linear-gradient(90deg,transparent 0 12%,#ffffff0b 12% 24%,transparent 24% 36%,#ffffff0b 36% 48%,transparent 48% 60%,#ffffff0b 60% 72%,transparent 72% 84%,#ffffff0b 84% 96%,transparent 96%),
+    repeating-linear-gradient(180deg,#ffffff08 0 2px,transparent 2px 58px);
+  border-top:2px solid #ffffffa8;
+  box-shadow:inset 0 22px 50px #0d342d55;
+}
+.hero:after{
+  width:min(80vw,740px);height:min(45vw,410px);left:50%;top:34%;
+  transform:translateX(-50%);border-radius:4px;filter:none;
+  background:transparent;border:2px solid #ffffffa8;
+  box-shadow:0 0 0 999px #0b302b1c;
+}
+.hero-inner{color:white;text-shadow:0 2px 16px #102e2d55}
+.hero .eyebrow{color:#fff8d8;background:#ffffff18;border-color:#ffffff66;box-shadow:0 8px 24px #0b2e2b33}
+.hero h1{color:#fff;text-shadow:0 5px 0 #286445,0 12px 28px #082a244d}
+.hero h1 span{color:#ffe98b;text-shadow:0 5px 0 #9a7c36,0 12px 28px #082a244d}
+.hero .hero-desc{color:#f0ffe9;text-shadow:0 2px 8px #0c342c88}
+.hero .age{background:linear-gradient(145deg,#fff3a8,#ffd16b);color:#28583d;border-color:#fff9dd;box-shadow:0 0 0 7px #ffffff22,0 13px 32px #102d2744}
+.hero .age-copy small,.hero .age-copy span{color:#e4f6df}
+.hero .age-copy b{color:#fff0a0;text-shadow:0 2px 8px #183c2b88}
+.hero .nav .brand{color:#fff}
+.hero .brand span{color:#ffe98b}
+.hero .nav-pill{background:#ffffff18;border-color:#ffffff5c;color:#fff8d8}
+.hero .scroll{color:#e6f6e0}
+.hero .btn.secondary{background:#ffffffea;color:#24583e;border-color:#ffffff}
+.hero .primary{background:linear-gradient(100deg,#ffd968,#ff9c70);color:#284b35;box-shadow:0 7px 0 #103e2a55,0 12px 24px #0c302a44}
+.hero .float{z-index:2;filter:drop-shadow(0 8px 10px #0b2e2d66)}
+.hero .f1{left:9%;top:28%}.hero .f2{right:9%;top:28%}.hero .f3{left:12%;bottom:17%}.hero .f4{right:12%;bottom:17%}
+.hero:after{
+  content:"";width:min(80vw,740px);height:min(45vw,410px);left:50%;top:34%;
+  transform:translateX(-50%);border-radius:4px;filter:none;background:transparent;
+  border:2px solid #ffffff9c;
+}
+.hero .stadium-ball{
+ position:absolute;left:50%;bottom:9%;transform:translateX(-50%);
+ font-size:clamp(2.5rem,6vw,5rem);filter:drop-shadow(0 10px 10px #06291f88);
+ animation:ballBounce 2.2s ease-in-out infinite;z-index:2;
+}
+@keyframes ballBounce{0%,100%{transform:translate(-50%,0) rotate(-10deg)}50%{transform:translate(-50%,-20px) rotate(25deg)}}
+.party-strip{background:linear-gradient(100deg,#e1f5d8,#fff1c9 38%,#d9f6e7 70%,#e8e2ff)}
+.party-strip-title{color:#276044}.party-strip-title em{color:#d86b53}
+@media(max-width:540px){
+ .hero:before{top:30%;background:repeating-linear-gradient(90deg,transparent 0 35px,#ffffff0b 35px 70px)}
+ .hero:after{top:38%;height:35vw}
+ .hero .f1{left:3%}.hero .f2{right:3%}
+}
+
+
+/* TWO-SPORT ARENA: FOOTBALL PITCH + CRICKET GROUND */
+.hero{
+  background:
+    radial-gradient(ellipse at 50% 5%,#fff5bd66 0%,transparent 25%),
+    linear-gradient(180deg,#152b46 0%,#25445b 20%,#397858 43%,#2d7c4c 68%,#175337 100%);
+}
+.hero:before{
+  inset:24% -5% -15%;width:auto;height:auto;border-radius:0;filter:none;
+  background:
+    repeating-linear-gradient(90deg,transparent 0 12%,#ffffff0b 12% 24%),
+    repeating-linear-gradient(180deg,#ffffff08 0 2px,transparent 2px 58px);
+  border-top:2px solid #ffffffa8;
+  box-shadow:inset 0 22px 50px #0d342d55;
+}
+.hero:after{
+  content:"";width:min(80vw,740px);height:min(45vw,410px);left:50%;top:34%;
+  transform:translateX(-50%);border-radius:4px;background:transparent;border:2px solid #ffffff8a;
+  box-shadow:0 0 0 999px #0b302b1c;
+}
+.hero .stadium-ball{bottom:8%}
+.hero .float.f1{left:8%;top:29%}
+.hero .float.f2{right:8%;top:29%}
+.hero .float.f3{left:12%;bottom:17%}
+.hero .float.f4{right:12%;bottom:17%}
+.sports-badge{
+ display:inline-flex;align-items:center;gap:12px;justify-content:center;
+ margin:18px auto 0;padding:10px 18px;border-radius:999px;
+ background:#102f29a8;border:1px solid #ffffff5c;color:#fff7d2;
+ font-size:.83rem;font-weight:900;letter-spacing:.04em;
+ box-shadow:0 10px 28px #082c2540;backdrop-filter:blur(8px)
+}
+.sports-field{background:linear-gradient(110deg,#e0f4d9,#fff1c9 38%,#d7f3e5 70%,#e9e2ff)}
+.sports-duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px auto 0;max-width:860px}
+.sport-card{position:relative;overflow:hidden;min-height:160px;border-radius:24px;padding:22px;text-align:left;border:1px solid #ffffffb0;box-shadow:0 12px 35px #183b2a20}
+.sport-card.cricket{background:linear-gradient(135deg,#d9f1ce,#9bd29b);color:#214c31}
+.sport-card.football{background:linear-gradient(135deg,#d8eaff,#9fc3e9);color:#1e4269}
+.sport-card .sport-emoji{font-size:3rem;display:block;filter:drop-shadow(0 6px 5px #214c3120)}
+.sport-card strong{display:block;font:700 1.45rem Fredoka;margin:8px 0 5px}
+.sport-card span:last-child{font-size:.9rem;line-height:1.55;display:block;opacity:.85}
+.sport-card:after{content:"";position:absolute;width:140px;height:140px;border:2px solid #ffffff70;border-radius:50%;right:-40px;bottom:-65px}
+@media(max-width:540px){.sports-duo{grid-template-columns:1fr;gap:10px}.sport-card{min-height:130px;padding:18px}.hero:after{top:38%;height:35vw}}
+
+
+/* REAL STADIUM BACKGROUNDS — Wembley for first two sections; Narendra Modi Stadium for later sections */
+.hero,.party-strip[aria-label="Cricket and football birthday arena"]{
+ background-image:linear-gradient(180deg,rgba(6,18,37,.70),rgba(8,38,31,.62)),url("https://upload.wikimedia.org/wikipedia/commons/c/c4/Wembley_Stadium_panoramic.jpg");
+ background-position:center center;background-size:cover;background-repeat:no-repeat;
+}
+.hero{background-color:#123c2e}
+.party-strip[aria-label="Cricket and football birthday arena"]{color:#fff;background-color:#163e30}
+.party-strip[aria-label="Cricket and football birthday arena"] .party-strip-title{color:#fff}
+.party-strip[aria-label="Cricket and football birthday arena"] .party-strip-title em{color:#ffe58a}
+.party-strip[aria-label="Cricket and football birthday arena"] .party-strip-sub{color:#f5f5e8}
+.party-strip[aria-label="Cricket and football birthday arena"] .party-stamp{background:#ffffffdf}
+.letter-section,.gallery-section,.timeline,.cake-section,.oracle,footer{
+ background-image:linear-gradient(180deg,rgba(8,28,22,.72),rgba(8,30,23,.78)),url("https://upload.wikimedia.org/wikipedia/commons/c/cb/Narendra_Modi_Stadium_view_from_the_gallery.jpg");
+ background-position:center center;background-size:cover;background-attachment:fixed;background-repeat:no-repeat;
+}
+.letter,.memory,.moment,.cake-card,.oracle-card{backdrop-filter:blur(5px);background:rgba(255,253,253,.94)}
+.letter-section .title,.gallery-section .title,.timeline .title,.cake-section .title,.oracle .title,
+.letter-section .lead,.gallery-section .lead,.timeline .lead,.cake-section .lead,.oracle .lead{color:#fff}
+.letter-section .kicker,.gallery-section .kicker,.timeline .kicker,.cake-section .kicker,.oracle .kicker{color:#ffe7a1}
+footer{color:#fff}footer p{color:#fff2df}footer .footer-title{color:#ffe18a}
+#goal-challenge,#cricket-game,#wish-finale{scroll-margin-top:20px}
+.game-section{padding:82px 20px;background:linear-gradient(180deg,rgba(8,18,35,.78),rgba(8,33,24,.80)),url("https://upload.wikimedia.org/wikipedia/commons/c/c4/Wembley_Stadium_panoramic.jpg") center/cover fixed;color:white}
+.game-section.cricket-bg{background-image:linear-gradient(180deg,rgba(5,24,17,.77),rgba(5,31,20,.82)),url("https://upload.wikimedia.org/wikipedia/commons/c/cb/Narendra_Modi_Stadium_view_from_the_gallery.jpg")}
+.game-panel{max-width:920px;margin:auto;padding:clamp(22px,4vw,38px);border-radius:28px;background:#ffffffed;color:#4d3d54;box-shadow:0 24px 70px #001b1838;border:1px solid #ffffffaa;text-align:center}
+.game-panel .game-title{font:700 clamp(2rem,5vw,3.5rem)/1.08 Fredoka;color:#75528b;margin:10px 0}
+.game-panel .game-lead{color:#7e6b83;line-height:1.7;max-width:680px;margin:0 auto 22px}
+.goal-pitch{height:280px;position:relative;overflow:hidden;border-radius:22px;background:repeating-linear-gradient(90deg,#247546 0 12.5%,#2e8950 12.5% 25%);border:3px solid #fff;box-shadow:inset 0 0 0 2px #ffffff55}
+.goal-pitch:before{content:"";position:absolute;inset:12px;border:2px solid #ffffffad}
+.goal-frame{position:absolute;left:50%;top:16px;transform:translateX(-50%);width:180px;height:102px;border:8px solid white;border-bottom:0;background:repeating-linear-gradient(90deg,#ffffff26 0 8px,transparent 8px 18px);box-shadow:0 0 0 2px #b9e9ff66}
+.goal-frame:after{content:"";position:absolute;left:50%;top:0;height:100%;border-left:2px solid #ffffff77}
+.goal-ball{position:absolute;bottom:24px;left:12%;font-size:42px;transition:all .65s cubic-bezier(.2,.8,.3,1);filter:drop-shadow(0 7px 5px #153b1f55)}
+.goal-ball.scored{left:calc(50% - 22px);bottom:140px;transform:scale(.65) rotate(600deg)}
+.goalkeeper{position:absolute;left:50%;top:65px;transform:translateX(-50%);font-size:38px}
+.score-banner{font:700 1.3rem Fredoka;color:#2d8750;margin:16px 0;min-height:32px}
+.cricket-lane{height:250px;position:relative;overflow:hidden;border-radius:22px;background:linear-gradient(90deg,#2b7a48 0 18%,#b5a176 18% 82%,#2b7a48 82%);border:3px solid white}
+.cricket-lane:before{content:"";position:absolute;left:18%;right:18%;top:0;bottom:0;background:repeating-linear-gradient(0deg,#b8a77d 0 22px,#c9b78b 22px 44px);opacity:.7}
+.pitch-line{position:absolute;top:15px;bottom:15px;left:24%;right:24%;border-left:3px solid #fff9d8;border-right:3px solid #fff9d8}
+.stumps{position:absolute;left:14%;bottom:42px;font-size:38px;z-index:3}
+.bat{position:absolute;left:24%;bottom:28px;font-size:68px;z-index:4;transform-origin:70% 80%;transition:transform .12s}
+.bat.swing{transform:rotate(-68deg) translateY(-12px)}
+.cricket-ball{position:absolute;right:12%;top:45%;font-size:28px;z-index:5;filter:drop-shadow(0 4px 3px #55302255)}
+.cricket-ball.flying{animation:sixShot 1.2s ease-in forwards}
+@keyframes sixShot{to{right:76%;top:-5%;transform:scale(.55) rotate(900deg)}}
+.game-hud{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:14px 0}
+.hud-pill{border-radius:99px;padding:8px 13px;background:#f4edf9;color:#795a90;font-weight:900;font-size:.85rem}
+.wish-form{max-width:650px;margin:20px auto 0;display:grid;gap:12px}
+.wish-form input{width:100%;padding:15px;border-radius:14px;border:1px solid #e8d7ee;font:inherit;color:#4d3d54}
+.wish-reveal{display:none;margin:18px auto 0;padding:20px;border-radius:18px;background:#fff0c8;color:#7a5b25;line-height:1.8;font-weight:800}
+.wish-reveal.show{display:block;animation:pop .45s ease}
+@media(max-width:600px){.goal-pitch{height:235px}.cricket-lane{height:220px}.goal-frame{width:145px;height:88px}.letter-section,.gallery-section,.timeline,.cake-section,.oracle,footer,.game-section{background-attachment:scroll}}
+
+
+/* Memory gallery refresh: hidden photo balls open a clean full-image viewer */
+.gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,3vw,30px);justify-items:center;align-items:start}
+.memory{width:100%;max-width:225px;min-width:0;padding:0;border:0;background:transparent;box-shadow:none;transform:none!important;overflow:visible;cursor:default}
+.memory:hover,.memory:focus{transform:none!important;box-shadow:none;border-color:transparent}
+.memory-ball{width:100%;aspect-ratio:1/1;border:5px solid #fff;outline:1px solid #edd6e5;border-radius:50%;padding:15px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:7px;color:#7b5d91;background:radial-gradient(circle at 28% 20%,#fff 0 10%,transparent 36%),linear-gradient(145deg,#ffe3ed,#e8e2ff 56%,#e3f8ec);box-shadow:0 12px 28px #65415e20,inset 0 0 0 2px #ffffffa6;cursor:pointer;transition:transform .22s,box-shadow .22s;overflow:hidden}
+.memory:nth-child(2n) .memory-ball{background:radial-gradient(circle at 28% 20%,#fff 0 10%,transparent 36%),linear-gradient(145deg,#fff0c7,#ffdce9 58%,#e9e2ff)}
+.memory:nth-child(3n) .memory-ball{background:radial-gradient(circle at 28% 20%,#fff 0 10%,transparent 36%),linear-gradient(145deg,#dff7ed,#e5e0ff 58%,#ffe5ef)}
+.memory-ball:hover,.memory-ball:focus-visible{transform:translateY(-5px) scale(1.035);box-shadow:0 18px 36px #65415e30,inset 0 0 0 2px white;outline:2px solid #d88caf;outline-offset:4px}
+.memory-ball .ball-icon{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1}
+.memory-ball strong{font:600 clamp(.92rem,1.5vw,1.12rem)/1.15 Fredoka;color:#805b9c;max-width:100%;overflow-wrap:anywhere}
+.memory-ball small{font-size:clamp(.68rem,1vw,.78rem);line-height:1.35;color:#826d8b;max-width:100%;overflow-wrap:anywhere}
+.memory img,.memory .caption-detail,.memory .secret{display:none!important}
+.memory figcaption{display:none}
+.memory-modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;background:#24192bd9;backdrop-filter:blur(9px)}
+.memory-modal.show{display:flex;animation:pop .22s ease}
+.memory-modal-card{position:relative;width:min(780px,100%);max-height:92vh;overflow:auto;border-radius:26px;padding:18px;background:linear-gradient(145deg,#fffdfd,#fff3f8);box-shadow:0 28px 90px #0005;text-align:center}
+.memory-modal-close{position:sticky;float:right;top:0;z-index:2;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#8e5e83;font-size:1.5rem;box-shadow:0 4px 15px #7a456022}
+.memory-modal-photo{display:block;width:100%;height:min(62vh,600px);object-fit:contain;object-position:center;border-radius:17px;background:linear-gradient(135deg,#f9eaf0,#eee8fb);clear:both}
+.memory-modal-title{font:600 clamp(1.4rem,4vw,2rem) Fredoka;color:#8d69aa;margin:16px 8px 6px}
+.memory-modal-detail{color:#8c7b92;line-height:1.6;margin:0 auto 10px;max-width:600px}
+.memory-modal-secret{background:#fff0f6;border:1px solid #f1d8e4;color:#a85d80;border-radius:16px;padding:14px 16px;line-height:1.7;font-weight:700;max-width:650px;margin:12px auto 3px}
+@media(max-width:900px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.memory{max-width:210px}}
+@media(max-width:600px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 10px}.memory{max-width:190px}.memory-ball{padding:11px;border-width:4px;gap:6px}.memory-modal{padding:10px}.memory-modal-card{padding:12px;border-radius:20px}.memory-modal-photo{height:min(58vh,500px)}}
+@media(max-width:360px){.memory-ball small{font-size:.64rem}.memory-ball strong{font-size:.86rem}}
+
+</style>
+</head>
+<body>
+<div class="bg-bloom"></div><div id="confetti"></div><div id="toast"></div>
+<header class="hero" id="home">
+<div class="nav"><div class="brand">dear <span>✿</span> YASH</div><div class="nav-pill">LEVEL 11 · PARTY MODE ON</div></div>
+<div class="float f1">⚽</div><div class="float f2">🏏</div><div class="float f3">🏆</div><div class="float f4">🏟️</div>
+<div class="stadium-ball" aria-hidden="true">⚽</div>
+<div class="hero-inner"><div class="eyebrow">🏏⚽ WELCOME TO YASH’S ALL-STAR ARENA ⚽🏏</div>
+<h1>IT’S YOUR DAY<span>YASH!!</span></h1>
+<p class="hero-desc">Sound the alarms, launch the confetti, and bring out the cake! The coolest little brother just hit LEVEL 11. Today the rules are simple: laugh loudly, eat cake, make memories, and have an absolutely legendary day! 🎉</p>
+<div class="age-row"><div class="age"><strong>11</strong></div><div class="age-copy"><small>A brand-new chapter</small><b>ALL-STAR LEVEL 11</b><span>🏏 Sixes, goals & birthday glory · One all-star champ</span></div></div>
+<div class="buttons"><button class="btn primary" onclick="document.getElementById('goal-challenge').scrollIntoView({behavior:'smooth'})">⚽ HIT FOR THE GOAL!</button><button class="btn secondary" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">💌 OPEN YOUR LETTER</button></div>
+</div><div class="scroll">SCROLL DOWN — THE SURPRISES GET WILDER ↓</div></header>
+
+
+<section class="party-strip sports-field" aria-label="Cricket and football birthday arena">
+  <div class="wrap party-strip-inner">
+    <span class="party-stamp">🏏⚽ TWO SPORTS · ONE BIRTHDAY LEGEND ⚽🏏</span>
+    <div class="party-strip-title">SIXES IN THE MORNING. <em>GOALS BY EVENING.</em></div>
+    <div class="party-strip-sub">Yash is captain of the cricket ground AND the football pitch today! 👑</div>
+    <div class="sports-duo">
+      <div class="sport-card cricket"><span class="sport-emoji">🏏</span><strong>CRICKET CHAMP</strong><span>Big hits, flying sixes, and a birthday innings worth remembering.</span></div>
+      <div class="sport-card football"><span class="sport-emoji">⚽</span><strong>FOOTBALL STAR</strong><span>Power shots, perfect goals, and a stadium cheering his name.</span></div>
+    </div>
+    <div class="party-actions">
+      <button class="btn primary" onclick="celebrate();toast('🏏⚽ ALL-STAR MATCH-DAY MODE ACTIVATED!')">🎉 RELEASE THE CELEBRATION</button>
+      <button class="btn secondary" onclick="document.getElementById('cake').scrollIntoView({behavior:'smooth'})">🎂 JUMP TO THE CAKE</button>
+    </div>
+  </div>
+</section>
+
+
+<section class="game-section" id="goal-challenge">
+ <div class="game-panel">
+  <div class="kicker">⚽ WEMBLEY STADIUM · FINAL MOMENT</div>
+  <h2 class="game-title">HIT FOR THE GOAL!</h2>
+  <p class="game-lead">Yash, the stadium is roaring and the goalkeeper is ready. Tap the button to take your birthday penalty. Then keep exploring the next page!</p>
+  <div class="goal-pitch" id="goalPitch"><div class="goal-frame"></div><div class="goalkeeper">🧤</div><div class="goal-ball" id="goalBall">⚽</div></div>
+  <div class="score-banner" id="goalStatus">Penalty kick ready, superstar?</div>
+  <button class="btn primary" id="goalBtn" onclick="scoreGoal()">⚽ SHOOT THE GOAL!</button>
+ </div>
+</section>
+
+<section class="letter-section" id="letter"><div class="wrap"><div class="kicker">💌 A NOTE FROM YOUR BIG BROTHER</div><h2 class="title">A hug, written in words</h2><p class="lead">Some feelings are too big for an ordinary birthday card.</p>
+<div class="letter"><h3>My dearest Yash, 🌼</h3>
+<p>Happy 11th birthday to my cutest little brother! If I could wrap up all the love I have for you, it would be bigger than the sky and brighter than every star. You make ordinary days funnier, family moments sweeter, and life so much more special.</p>
+<p>I hope eleven brings you brave adventures, new things to learn, friends who make you laugh until your tummy hurts, and dreams that keep getting bigger. Never hide your kind heart or your wonderfully silly side. The world needs both.</p>
+<p>And remember, little champ: even when you grow taller, smarter, and cooler than me, you'll always have a big brother who is on your side. I'll cheer for you, protect you, tease you just a little, and love you a whole lot — today and every day.</p>
+<p><strong>Keep your eyes full of wonder and your heart full of kindness. Your story is only getting started. ✨</strong></p>
+<p class="sign">Big hugs, a million high-fives, and endless love — your big brother ❤️</p></div></div></section>
+
+<section class="gallery-section" id="memories"><div class="wrap"><div class="kicker">📸 OUR LITTLE MEMORY GALLERY</div><h2 class="title">Eight moments, a thousand feelings</h2><p class="lead">Every picture has its own little story. Tap any memory to open a secret message just for Yash. 💗</p>
+<div class="gallery">
+<figure class="memory" tabindex="0" role="button" onclick="toggleMemory(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMemory(this)}" style="--tilt:-1.5deg"><img src="images/memory-1.jpg" alt="Yash and his brother smiling together" loading="lazy"><figcaption>Partners in mischief 😄</figcaption><div class="caption-detail">Some of my happiest moments have you in them.</div><div class="secret">Life is more fun with you on my team. Brothers forever, best buddies always. 💛</div></figure>
+<figure class="memory" tabindex="0" role="button" onclick="toggleMemory(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMemory(this)}" style="--tilt:1.5deg"><img src="images/memory-2.jpg" alt="Yash smiling for a photo" loading="lazy"><figcaption>Our birthday superstar ⭐</figcaption><div class="caption-detail">That smile deserves its own sunshine.</div><div class="secret">Never stop smiling, little star. Your happiness lights up our world. 🌟</div></figure>
+<figure class="memory" tabindex="0" role="button" onclick="toggleMemory(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMemory(this)}" style="--tilt:1.2deg"><img src="images/memory-3.jpg" alt="A sweet memory of the brothers together" loading="lazy"><figcaption>Team us, always 🤝</figcaption><div class="caption-detail">A tiny snapshot of a bond that keeps growing.</div><div class="secret">Whatever adventure comes next, you will never have to face it alone. I've got you. 🫶</div></figure>
+<figure class="memory" tabindex="0" role="button" onclick="toggleMemory(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMemory(this)}" style="--tilt:-1.5deg"><img src="images/memory-4.jpg" alt="Yash relaxing and smiling" loading="lazy"><figcaption>Keep shining, Yash 🌷</figcaption><div class="caption-detail">A little focus today, a big future tomorrow.</div><div class="secret">Dream big, be kind, laugh loudly, and always remember how loved you are. 💖</div></figure>
+<figure class="memory" tabindex="0" role="button" onclick="toggleMemory(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMemory(this)}" style="--tilt:1.6deg"><img src="images/memory-5.jpg" alt="A sweet moment with little Yash and his brother" loading="lazy"><figcaption>Little moments, big love 🧸</figcaption><div class="caption-detail">Even the smallest gestures become our favourite memories.</div><div class="secret">You may not remember every little moment, but I hope you always remember how loved you were. ❤️</div></figure>
+<figure class="memory" tabindex="0" role="button" onclick="toggleMemory(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMemory(this)}" style="--tilt:-1deg"><img src="images/memory-6.jpg" alt="Three brothers spending time together outdoors" loading="lazy"><figcaption>Our little squad 🌿</figcaption><div class="caption-detail">A day out that turned into a memory to keep.</div><div class="secret">May life keep giving us more days together, more laughter, and more stories to tell. 🌈</div></figure>
+<figure class="memory" tabindex="0" role="button" onclick="toggleMemory(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMemory(this)}" style="--tilt:1deg"><img src="images/memory-7.jpg" alt="Yash standing confidently in a stylish outfit" loading="lazy"><figcaption>Growing into your own ✨</figcaption><div class="caption-detail">A little taller, a little bolder, always our Yash.</div><div class="secret">Keep finding your style, your courage, and the things that make you uniquely YOU. 💫</div></figure>
+<figure class="memory" tabindex="0" role="button" onclick="toggleMemory(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMemory(this)}" style="--tilt:-1.6deg"><img src="images/memory-8.jpg" alt="Yash working carefully in his notebook" loading="lazy"><figcaption>Dreams in the making ✏️</figcaption><div class="caption-detail">Every little effort is a step toward something wonderful.</div><div class="secret">Stay curious and keep trying, champ. I can't wait to see all the amazing things you'll do. 🌟</div></figure>
+</div></div></section>
+
+<section class="timeline"><div class="wrap"><div class="kicker">🌸 THE THINGS I WISH FOR YOU</div><h2 class="title">Your next chapter, beautifully begun</h2><p class="lead">A few little wishes for the big, bright year ahead.</p><div class="timeline-grid">
+<div class="moment"><div class="icon">🚀</div><h3>Adventures worth remembering</h3><p>May you explore new places, try new things, and collect stories that make you grin for years.</p></div>
+<div class="moment"><div class="icon">😂</div><h3>Laughter that fills the room</h3><p>May your days be full of silly jokes, belly laughs, and people who make you feel at home.</p></div>
+<div class="moment"><div class="icon">🦁</div><h3>A brave and kind heart</h3><p>May you stay brave enough to try and kind enough to make someone else's day better.</p></div>
+<div class="moment"><div class="icon">🧠</div><h3>Curiosity without limits</h3><p>Keep asking questions, learning little by little, and being amazed by the world.</p></div>
+<div class="moment"><div class="icon">🤝</div><h3>People who cheer for you</h3><p>May you always have friends and family who celebrate your wins and stand beside you.</p></div>
+<div class="moment"><div class="icon">🍰</div><h3>Sweetness in every season</h3><p>More cake, more hugs, more happy surprises — and plenty of reasons to celebrate.</p></div>
+</div></div></section>
+
+
+<section class="game-section cricket-bg" id="cricket-game">
+ <div class="game-panel">
+  <div class="kicker">🏏 NARENDRA MODI STADIUM · BATTING CHALLENGE</div>
+  <h2 class="game-title">SMASH IT FOR SIX!</h2>
+  <p class="game-lead">The bowler will send each ball automatically. You only need to watch carefully and tap <b>SWING THE BAT!</b> (or press Space) when the ball reaches the hitting zone!</p>
+  <div class="game-hud"><span class="hud-pill" id="ballNumber">BALL 1 / 3</span><span class="hud-pill" id="runScore">SCORE: 0</span><span class="hud-pill">TARGET: SIX!</span></div>
+  <div class="cricket-lane" id="cricketLane"><div class="pitch-line"></div><div class="stumps">🏏</div><div class="bat" id="bat">🏏</div><div class="cricket-ball" id="cricketBall">🔴</div></div>
+  <div class="score-banner" id="cricketStatus">Ready, batter? Start the ball!</div>
+  <div class="buttons"><button class="btn primary" id="swingBtn" onclick="swingBat()" disabled>💥 SWING THE BAT!</button><button class="btn secondary" id="retryCricketBtn" onclick="resetCricket()" style="display:none">🔁 TRY AGAIN</button></div>
+  <p style="font-size:.85rem;color:#8b7b91;margin-top:15px">The bowling is automatic. You get three deliveries — just swing the bat!</p>
+ </div>
+</section>
+
+<section class="cake-section" id="cake"><div class="wrap"><div class="kicker">🕯️ THE MOST IMPORTANT MOMENT</div><h2 class="title">Hit a six. Light up the birthday!</h2><p class="lead">First smash a six in the cricket game. Then watch the candles go out, cut the cake, and make your birthday wish. 🌟</p>
+<div class="cake-card"><div class="cake-emoji" id="cakeEmoji">🎂</div><div class="candles" id="candles"></div><p id="cakeText">Close your eyes, think of something wonderful, and get ready, birthday boy…</p><button class="btn primary" id="blowBtn" onclick="blowCandles()">🏏 HIT FOR THE SIX!</button><button class="btn secondary" id="cutCakeBtn" style="display:none;margin:12px auto 0" onclick="cutCake()">🔪 CUT THE BIRTHDAY CAKE!</button><div class="cake-wish" id="cakeWish">✨ SIXER! THE CANDLES ARE OUT! ✨<br>The stadium is cheering for you, Yash! The cake is ready to be cut. Now head to your final wish and make it magical. 💖🎈</div></div></div></section>
+
+<section class="oracle"><div class="wrap"><div class="kicker">🔮 A LITTLE BIRTHDAY MAGIC</div><h2 class="title">A wish picked just for you</h2><p class="lead">Tap the button whenever you want another little wish from the birthday stars.</p><div class="oracle-card"><div class="oracle-icon">🌟</div><div class="wishline" id="wishLine">Your special birthday wish is waiting…</div><p id="wishHint">Let's see what the stars have planned for Year 11.</p><button class="btn secondary" onclick="newWish()">✨ REVEAL A WISH</button></div></div></section>
+
+
+<section class="game-section cricket-bg" id="wish-finale">
+ <div class="game-panel">
+  <div class="kicker">🌠 YOUR FINAL BIRTHDAY MAGIC</div>
+  <h2 class="game-title">MAKE A WISH, YASH!</h2>
+  <p class="game-lead">You scored the goal, smashed the six, and cut the cake. Now close your eyes, think of something wonderful, and type your secret wish below. Send it to the birthday stars! ✨</p>
+  <div style="font-size:4rem">🌠🎂💫</div>
+  <form class="wish-form" onsubmit="sendWish(event)">
+   <input id="wishInput" maxlength="180" placeholder="My birthday wish is..." aria-label="Your birthday wish" required>
+   <button class="btn primary" type="submit">🌟 SEND MY WISH TO THE STARS</button>
+  </form>
+  <div class="wish-reveal" id="wishReveal"></div>
+ </div>
+</section>
+
+<footer><div style="font-size:2.5rem">🎈 🌷 🎂 🧸</div><div class="footer-title">Happy 11th Birthday, Yash!</div><p>You'll always be my little brother, no matter how big you grow. ❤️</p><p style="font-size:.87rem">A tiny birthday universe, made with a whole lot of love.</p><button class="btn primary" onclick="window.scrollTo({top:0,behavior:'smooth'});celebrate()">🌸 BACK TO THE CELEBRATION</button></footer>
+<div class="memory-modal" id="memoryModal" role="dialog" aria-modal="true" aria-label="Birthday memory" onclick="if(event.target===this)closeMemory()"><div class="memory-modal-card"><button class="memory-modal-close" type="button" aria-label="Close photo" onclick="closeMemory()">×</button><img class="memory-modal-photo" id="memoryModalPhoto" src="" alt=""><h3 class="memory-modal-title" id="memoryModalTitle"></h3><p class="memory-modal-detail" id="memoryModalDetail"></p><div class="memory-modal-secret" id="memoryModalSecret"></div></div></div>
+<script>
+function toast(t){const el=document.getElementById('toast');el.textContent=t;el.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.style.display='none',2600)}
+function celebrate(){const area=document.getElementById('confetti');const colors=['#ff5c8a','#ffc857','#7bdff2','#b2f7ef','#b8a1ff','#ff8fab','#70d6a8','#ff9f1c'];for(let i=0;i<150;i++){const p=document.createElement('span');p.className='confetti';p.style.left=Math.random()*100+'%';p.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)];p.style.width=(6+Math.random()*7)+'px';p.style.height=(9+Math.random()*10)+'px';p.style.setProperty('--time',(2.8+Math.random()*2.6)+'s');p.style.setProperty('--drift',((Math.random()-.5)*180)+'px');p.style.animationDelay=(Math.random()*.35)+'s';area.appendChild(p);setTimeout(()=>p.remove(),6000)}}
+function openMemory(el){
+ const img=el.querySelector('img'), title=el.querySelector('figcaption'), detail=el.querySelector('.caption-detail'), secret=el.querySelector('.secret');
+ document.getElementById('memoryModalPhoto').src=img.src;
+ document.getElementById('memoryModalPhoto').alt=img.alt||title.textContent;
+ document.getElementById('memoryModalTitle').textContent=title.textContent;
+ document.getElementById('memoryModalDetail').textContent=detail.textContent;
+ document.getElementById('memoryModalSecret').textContent=secret.textContent;
+ const modal=document.getElementById('memoryModal');modal.classList.add('show');document.body.style.overflow='hidden';document.getElementById('memoryModalClose')?.focus();
+}
+function closeMemory(){const modal=document.getElementById('memoryModal');if(modal){modal.classList.remove('show');document.body.style.overflow='';document.getElementById('memoryModalPhoto').src='';}}
+function toggleMemory(el){openMemory(el)}
+function prepareMemoryBalls(){
+ document.querySelectorAll('.gallery .memory').forEach((card,i)=>{
+  const title=card.querySelector('figcaption')?.textContent||`Memory ${i+1}`;
+  const detail=card.querySelector('.caption-detail')?.textContent||'A little memory, a lot of love.';
+  const icons=['💗','⭐','🤝','🌷','🧸','🌿','✨','✏️'];
+  card.innerHTML=`<button class="memory-ball" type="button" aria-label="Open memory: ${title.replace(/&/g,'&amp;').replace(/"/g,'&quot;')}"><span class="ball-icon">${icons[i%icons.length]}</span><strong>${title}</strong><small>${detail}</small></button>`;
+  card.querySelector('.memory-ball').addEventListener('click',()=>{
+    const source=memoryData[i];
+    document.getElementById('memoryModalPhoto').src=source.src;
+    document.getElementById('memoryModalPhoto').alt=source.alt;
+    document.getElementById('memoryModalTitle').textContent=source.title;
+    document.getElementById('memoryModalDetail').textContent=source.detail;
+    document.getElementById('memoryModalSecret').textContent=source.secret;
+    document.getElementById('memoryModal').classList.add('show');document.body.style.overflow='hidden';
+  });
+ });
+}
+const memoryData=[
+ {src:'images/memory-1.jpg',alt:'Yash and his brother smiling together',title:'Partners in mischief 😄',detail:'Some of my happiest moments have you in them.',secret:'Life is more fun with you on my team. Brothers forever, best buddies always. 💛'},
+ {src:'images/memory-2.jpg',alt:'Yash smiling for a photo',title:'Our birthday superstar ⭐',detail:'That smile deserves its own sunshine.',secret:'Never stop smiling, little star. Your happiness lights up our world. 🌟'},
+ {src:'images/memory-3.jpg',alt:'A sweet memory of the brothers together',title:'Team us, always 🤝',detail:'A tiny snapshot of a bond that keeps growing.',secret:"Whatever adventure comes next, you will never have to face it alone. I've got you. 🫶"},
+ {src:'images/memory-4.jpg',alt:'Yash relaxing and smiling',title:'Keep shining, Yash 🌷',detail:'A little focus today, a big future tomorrow.',secret:'Dream big, be kind, laugh loudly, and always remember how loved you are. 💖'},
+ {src:'images/memory-5.jpg',alt:'A sweet moment with little Yash and his brother',title:'Little moments, big love 🧸',detail:'Even the smallest gestures become our favourite memories.',secret:'You may not remember every little moment, but I hope you always remember how loved you were. ❤️'},
+ {src:'images/memory-6.jpg',alt:'Three brothers spending time together outdoors',title:'Our little squad 🌿',detail:'A day out that turned into a memory to keep.',secret:'May life keep giving us more days together, more laughter, and more stories to tell. 🌈'},
+ {src:'images/memory-7.jpg',alt:'Yash standing confidently in a stylish outfit',title:'Growing into your own ✨',detail:'A little taller, a little bolder, always our Yash.',secret:'Keep finding your style, your courage, and the things that make you uniquely YOU. 💫'},
+ {src:'images/memory-8.jpg',alt:'Yash working carefully in his notebook',title:'Dreams in the making ✏️',detail:'Every little effort is a step toward something wonderful.',secret:"Stay curious and keep trying, champ. I can't wait to see all the amazing things you'll do. 🌟"}
+];
+function prepareMemoryBalls(){document.querySelectorAll('.gallery .memory').forEach((card,i)=>{const data=memoryData[i];card.innerHTML=`<button class="memory-ball" type="button" aria-label="Open memory ${i+1}: ${data.title}"><span class="ball-icon">${['💗','⭐','🤝','🌷','🧸','🌿','✨','✏️'][i]}</span><strong>${data.title}</strong><small>${data.detail}</small></button>`;card.querySelector('button').addEventListener('click',()=>{document.getElementById('memoryModalPhoto').src=data.src;document.getElementById('memoryModalPhoto').alt=data.alt;document.getElementById('memoryModalTitle').textContent=data.title;document.getElementById('memoryModalDetail').textContent=data.detail;document.getElementById('memoryModalSecret').textContent=data.secret;document.getElementById('memoryModal').classList.add('show');document.body.style.overflow='hidden';});});}
+document.addEventListener('DOMContentLoaded',prepareMemoryBalls);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMemory();});
+const candles=document.getElementById('candles');for(let i=0;i<11;i++){const c=document.createElement('span');c.className='candle';candles.appendChild(c)}
+let blown=false;function blowCandles(){if(blown){toast('💖 Your wish is already on its way!');return}blown=true;document.querySelectorAll('.candle').forEach((c,i)=>setTimeout(()=>c.classList.add('out'),i*70));document.getElementById('cakeEmoji').textContent='🍰';document.getElementById('cakeText').textContent='You did it, birthday champ! Your wish is on its way!';document.getElementById('cakeWish').classList.add('show');document.getElementById('blowBtn').textContent='💖 WISH SENT!';celebrate();toast('🕯️ 11 candles blown out — wish sent!')}
+const wishes=[['May you be brave enough to try, even when something feels new. 🦁','Your courage is growing right alongside you.'],['May your laugh always come easily and your heart stay light. 😂','A little more joy for every day.'],['May your curiosity lead you to amazing discoveries. 🚀','A whole universe is waiting to be explored.'],['May you always be surrounded by people who make you feel loved. 🤗','You deserve kindness every single day.'],['May your dreams grow bigger and your confidence grow stronger. 🌟','Your story is only getting started.'],['May you keep your kind heart and wonderfully silly side. 💖','The world needs your special kind of magic.'],['May every month bring a new adventure and a memory worth keeping. 🌈','A beautiful new chapter is yours.']];
+let last=-1;function newWish(){let n;do{n=Math.floor(Math.random()*wishes.length)}while(n===last);last=n;document.getElementById('wishLine').textContent=wishes[n][0];document.getElementById('wishHint').textContent=wishes[n][1];celebrate()}
+// No automatic celebration on page load; confetti appears only when explicitly requested.
+
+/* Birthday sports mini-games */
+let goalScored=false;
+function scoreGoal(){
+ if(goalScored){document.getElementById('goalStatus').textContent='GOOOOAAAL! You are the birthday superstar! 🏆';return}
+ goalScored=true;
+ document.getElementById('goalBall').classList.add('scored');
+ document.getElementById('goalStatus').textContent='GOOOOOAAAL! ⚽ YASH SCORES! 🏆';
+ const btn=document.getElementById('goalBtn');btn.textContent='💌 CONTINUE TO THE NEXT PAGE';
+ btn.onclick=()=>document.getElementById('letter').scrollIntoView({behavior:'smooth'});
+ setTimeout(()=>{document.getElementById('letter').scrollIntoView({behavior:'smooth'});},1300);
+}
+let ballsBowled=0, ballActive=false, swingOpen=false, cricketDone=false, ballTimer=null, swingTimer=null, nextBallTimer=null, autoBowlingStarted=false;
+function bowlBall(){
+ if(cricketDone||ballActive)return;
+ if(ballsBowled>=3){document.getElementById('cricketStatus').textContent='That was the over! Tap TRY AGAIN for three more balls.';document.getElementById('retryCricketBtn').style.display='inline-block';return}
+ ballsBowled++;ballActive=true;swingOpen=false;
+ document.getElementById('ballNumber').textContent='BALL '+ballsBowled+' / 3';
+ const ball=document.getElementById('cricketBall'), bat=document.getElementById('bat');
+ ball.classList.remove('flying');ball.style.transition='none';ball.style.right='12%';ball.style.top='45%';bat.classList.remove('swing');
+ document.getElementById('cricketStatus').textContent='Ball '+ballsBowled+' is coming automatically… get ready!';
+ document.getElementById('swingBtn').disabled=true;
+ ball.style.transition='right 1.6s linear, top 1.6s linear';requestAnimationFrame(()=>{ball.style.right='57%';ball.style.top='49%'});
+ ballTimer=setTimeout(()=>{if(!ballActive)return;swingOpen=true;document.getElementById('swingBtn').disabled=false;document.getElementById('cricketStatus').textContent='NOW! SWING, YASH! 💥';},950);
+ swingTimer=setTimeout(()=>{if(ballActive){ballActive=false;swingOpen=false;document.getElementById('swingBtn').disabled=true;document.getElementById('cricketStatus').textContent='Missed that one! The next ball is coming…';if(ballsBowled<3){nextBallTimer=setTimeout(bowlBall,800)}else{document.getElementById('cricketStatus').textContent='Over finished! Tap TRY AGAIN for three more balls.';document.getElementById('retryCricketBtn').style.display='inline-block';}}},1750);
+}
+function startAutoBowling(){if(autoBowlingStarted||cricketDone)return;autoBowlingStarted=true;document.getElementById('cricketStatus').textContent='Get ready! The bowler will send the first ball…';nextBallTimer=setTimeout(bowlBall,900)}
+function swingBat(){
+ if(!ballActive||!swingOpen){toast('Watch the ball — swing when it reaches the hitting zone! 👀');return}
+ clearTimeout(ballTimer);clearTimeout(swingTimer);clearTimeout(nextBallTimer);ballActive=false;swingOpen=false;cricketDone=true;
+ document.getElementById('bat').classList.add('swing');document.getElementById('cricketBall').classList.add('flying');
+ document.getElementById('runScore').textContent='SCORE: SIX! 🏏';document.getElementById('cricketStatus').textContent='SIXEEEEER! OUT OF THE PARK! 🏏';
+ document.getElementById('swingBtn').disabled=true;document.getElementById('swingBtn').textContent='🏆 SIX SCORED!';
+ document.getElementById('retryCricketBtn').style.display='none';
+ setTimeout(finishSix,1100);
+}
+function finishSix(){
+ document.querySelectorAll('.candle').forEach(c=>c.classList.add('out'));
+ document.getElementById('cakeEmoji').textContent='🎂';
+ document.getElementById('cakeText').textContent='SIXER! All 11 candles are blown out by your massive hit! Now cut your birthday cake.';
+ document.getElementById('cakeWish').classList.add('show');
+ document.getElementById('cutCakeBtn').style.display='inline-block';
+ document.getElementById('blowBtn').style.display='none';
+ toast('🏏 Six scored! Time to cut the cake!');
+}
+function cutCake(){
+ document.getElementById('cakeEmoji').textContent='🍰';
+ document.getElementById('cakeText').textContent='CAKE CUT! 🎂💖 Happy 11th birthday, Yash!';
+ document.getElementById('cutCakeBtn').textContent='💖 CAKE CUT — MAKE YOUR WISH';
+ document.getElementById('cutCakeBtn').onclick=()=>document.getElementById('wish-finale').scrollIntoView({behavior:'smooth'});
+ celebrate();toast('🍰 Cake cut! Your final birthday wish is waiting.');
+ setTimeout(()=>document.getElementById('wish-finale').scrollIntoView({behavior:'smooth'}),1000);
+}
+function resetCricket(){
+ clearTimeout(ballTimer);clearTimeout(swingTimer);clearTimeout(nextBallTimer);
+ ballsBowled=0;ballActive=false;swingOpen=false;cricketDone=false;autoBowlingStarted=false;
+ document.getElementById('ballNumber').textContent='BALL 1 / 3';document.getElementById('runScore').textContent='SCORE: 0';
+ document.getElementById('cricketStatus').textContent='Fresh over! The first ball will arrive automatically.';
+ document.getElementById('retryCricketBtn').style.display='none';
+ document.getElementById('swingBtn').textContent='💥 SWING THE BAT!';document.getElementById('swingBtn').disabled=true;
+ const ball=document.getElementById('cricketBall');ball.classList.remove('flying');ball.style.transition='none';ball.style.right='12%';ball.style.top='45%';
+ startAutoBowling();
+}
+const cricketSection=document.getElementById('cricket-game');
+if('IntersectionObserver' in window&&cricketSection){const cricketObserver=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){startAutoBowling();cricketObserver.disconnect()}},{threshold:.25});cricketObserver.observe(cricketSection)}
+else if(cricketSection){setTimeout(startAutoBowling,2500)}
+document.addEventListener('keydown',e=>{const section=document.getElementById('cricket-game');if(e.code==='Space'&&section&&section.getBoundingClientRect().top<window.innerHeight&&section.getBoundingClientRect().bottom>0){e.preventDefault();swingBat()}});
+function sendWish(event){
+ event.preventDefault();const input=document.getElementById('wishInput');const wish=input.value.trim();if(!wish)return;
+ const reveal=document.getElementById('wishReveal');reveal.textContent='🌟 YOUR WISH IS OFF TO THE STARS! 🌟 “'+wish+'” May this new year bring you happiness, courage, adventures, and lots of love. Happy 11th birthday, Yash! 💖🎈';reveal.classList.add('show');celebrate();toast('✨ Wish sent to the birthday stars!');
+}
+
+</script>
+</body></html>
